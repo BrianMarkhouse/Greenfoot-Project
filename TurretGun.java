@@ -39,21 +39,17 @@ public class TurretGun extends Actor
         public void act() 
     {
         // Add your action code here.
+        Stage1 stage1 = (Stage1) getWorld();
+        
+        int targetX = stage1.playerShip.getX();
+        int targetY = stage1.playerShip.getY();
+        
         setLocation(getX() - 1, getY());
-                // get the current state of the mouse
-        MouseInfo m = Greenfoot.getMouseInfo();
-        // if the mouse is on the screen...
-        if (m != null)
-        {
-            // aim the canon at the mouse
-            this.aim (m.getX(), m.getY());
-            // if the mouse button was pressed
-            if (Greenfoot.mousePressed(null))
-            {
-                // shoot
-                this.shoot(m.getX(), m.getY());
-            }
-        }
+        shoot(targetX, targetY);
+        turnTowards(targetX, targetY);
+        
+        
+        
         if (atWorldEdge())
            getWorld().removeObject(this);
     }    

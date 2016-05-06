@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Jordan Cohen
  * @version May 2013
  */
-public class Missile extends Actor
+public class Missile extends Projectile
 {
     // Class Variables:
     private int targX, targY;

@@ -8,7 +8,8 @@ import greenfoot.*;
  */
 public class PlayerShip extends Actor
 {
-        public void shoot (int targetX, int targetY)
+    
+            public void shoot (int targetX, int targetY)
     {
         Missile m = new Missile (targetX, targetY);
         getWorld().addObject (m, this.getX(), this.getY());
@@ -31,7 +32,7 @@ public class PlayerShip extends Actor
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.mousePressed(null)){
+        if (Greenfoot.isKeyDown("z")){
         this.shoot(1200, this.getY());
         }
         movement();
