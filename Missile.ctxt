@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=targX\ targY
+comment0.target=Missile(int,\ int)
+comment0.text=\r\n\ Construct\ a\ Missile\ given\ a\ target\ coordinate\r\n\ \r\n\ @param\ int\ \ \ Target\ x\ coordinate\r\n\ @param\ int\ \ \ Target\ y\ coordinate\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=boolean\ atWorldEdge()
+comment2.text=\r\n\ Checks\ if\ this\ Actor\ is\ at\ the\ edge\ of\ the\ World\r\n\ \r\n\ @return\ boolean\ \ true\ if\ at\ edge\ of\ the\ World,\ otherwise\ false\r\n
+numComments=3

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=x\ y
+comment0.target=void\ aim(int,\ int)
+comment1.params=targetX\ targetY
+comment1.target=void\ shoot(int,\ int)
+comment2.params=x\ y
+comment2.target=void\ turnTowards(int,\ int)
+comment2.text=\r\n\ This\ is\ the\ turnTowards\ method\ from\ Greenfoot\ 2.2.0\ and\ higher.\ I\ modified\ it\r\n\ to\ work\ in\ any\ Actor\ in\ Greenfoot\ 2.1.\ It\ requires\ the\ x\ and\ y\ coordinate\ you\ wish\r\n\ to\ point\ this\ Actor\ towards\r\n
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=boolean\ atWorldEdge()
+comment4.text=\r\n\ Checks\ if\ this\ Actor\ is\ at\ the\ edge\ of\ the\ World\r\n\ \r\n\ @return\ boolean\ \ true\ if\ at\ edge\ of\ the\ World,\ otherwise\ false\r\n
+numComments=5
