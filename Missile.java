@@ -26,11 +26,17 @@ public class Missile extends Projectile
         this.targX = targX;
         this.targY = targY;
         hitTarget = false;
-        speed = 5;
+        speed = 10;
     }
 
     public void act() 
     {
+        if(isTouching(PlayerShip.class) )
+        {
+            removeTouching(PlayerShip.class);
+            getWorld().removeObject(this);
+            return;
+        }
         // If I have come within 10 pixels of my destination, I no longer
         // want to update my direction as I am close enough:
         if (Math.abs(getX() - targX) < 10 && Math.abs(getY() - targY) < 10)

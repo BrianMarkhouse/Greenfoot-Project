@@ -1,14 +1,13 @@
 #BlueJ class context
-comment0.params=x\ y
-comment0.target=void\ aim(int,\ int)
-comment1.params=targetX\ targetY
-comment1.target=void\ shoot(int,\ int)
-comment2.params=x\ y
-comment2.target=void\ turnTowards(int,\ int)
-comment2.text=\r\n\ This\ is\ the\ turnTowards\ method\ from\ Greenfoot\ 2.2.0\ and\ higher.\ I\ modified\ it\r\n\ to\ work\ in\ any\ Actor\ in\ Greenfoot\ 2.1.\ It\ requires\ the\ x\ and\ y\ coordinate\ you\ wish\r\n\ to\ point\ this\ Actor\ towards\r\n
-comment3.params=
-comment3.target=void\ act()
+comment0.target=TurretGun
+comment0.text=\r\n\ Canon\ uses\ the\ turnToward(int\ x,\ int\ y)\ method\ as\ borrowed\ from\ the\ open\ source\ code\r\n\ of\ Greenfoot\ 2.2.1.\ This\ class\ does\ not\ act\ on\ it's\ own,\ but\ instead\ takes\ commands\ from\r\n\ its\ owner.\r\n\ \r\n\ @Jordan\ Cohen\r\n\ @June\ 2012\r\n
+comment1.params=x\ y
+comment1.target=void\ aim(int,\ int)
+comment2.params=targetX\ targetY
+comment2.target=void\ shoot(int,\ int)
+comment3.params=x\ y
+comment3.target=void\ turnTowards(int,\ int)
+comment3.text=\r\n\ This\ is\ the\ turnTowards\ method\ from\ Greenfoot\ 2.2.0\ and\ higher.\ I\ modified\ it\r\n\ to\ work\ in\ any\ Actor\ in\ Greenfoot\ 2.1.\ It\ requires\ the\ x\ and\ y\ coordinate\ you\ wish\r\n\ to\ point\ this\ Actor\ towards\r\n
 comment4.params=
-comment4.target=boolean\ atWorldEdge()
-comment4.text=\r\n\ Checks\ if\ this\ Actor\ is\ at\ the\ edge\ of\ the\ World\r\n\ \r\n\ @return\ boolean\ \ true\ if\ at\ edge\ of\ the\ World,\ otherwise\ false\r\n
+comment4.target=void\ act()
 numComments=5

@@ -1,9 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Star\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment1.params=speed\ color
-comment1.target=Star(int,\ java.awt.Color)
-comment2.params=
-comment2.target=void\ move()
-numComments=3
+comment0.target=Star
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Star\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Star\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=speed\ color
+comment2.target=Star(int,\ java.awt.Color)
+comment3.params=
+comment3.target=void\ move()
+numComments=4
