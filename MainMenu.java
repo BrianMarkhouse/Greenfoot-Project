@@ -8,7 +8,10 @@ import greenfoot.*;
  */
 public class MainMenu extends World
 {
-    Actor button = new Stage1Button();
+    Actor back = new BackButton();
+    Actor newGame = new NewGameButton();
+    Actor highScores = new HighScoresButton();
+    Actor instructions = new InstructionsButton();
     /**
      * Constructor for objects of class menu.
      * 
@@ -18,7 +21,9 @@ public class MainMenu extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 900, 1); 
 
-        addObject(button, 600, 450);
+        addObject(newGame, 600, 550);
+        addObject(highScores, 600, 640);
+        addObject(instructions, 600, 730);
         
     }
     
