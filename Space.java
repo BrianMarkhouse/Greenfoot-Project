@@ -33,7 +33,6 @@ public class Space extends World
         TurretGun turretGun = new TurretGun();
         PlayerShip playerShip = new PlayerShip();
         addObject (turretBase, 1200, 860);
-        addObject (turretGun, 1200, 860);
         addObject (playerShip, 100, 450);
         turretGun.setRotation (180);
          

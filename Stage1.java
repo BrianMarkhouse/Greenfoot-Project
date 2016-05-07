@@ -33,12 +33,9 @@ public class Stage1 extends World
         star();
         
         TurretBase turretBase = new TurretBase();
-        TurretGun turretGun = new TurretGun();
         playerShip = new PlayerShip();
-        addObject (turretBase, 1200, 860);
-        addObject (turretGun, 1200, 860);
+        addObject (turretBase, 1000, 450);
         addObject (playerShip, 100, 450);
-        turretGun.setRotation (180);
         
 
     }
@@ -75,7 +72,7 @@ public class Stage1 extends World
     
     public void act()
     {
-
+        setPaintOrder(TurretBase.class);
             for(int i = 0; i<210; i++){
                 if(stars[i] != null) {
                     stars[i].move();

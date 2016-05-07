@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TurretGun extends Actor
 {   
+    private int shotTimer = 50;
     // Aim toward x and y values passed in as parameters
     public void aim (int x, int y)
     {
@@ -22,8 +23,18 @@ public class TurretGun extends Actor
     // public method to "shoot" a canon ball in the direction this canon is currently facing
     public void shoot (int targetX, int targetY)
     {
+        
+        if (shotTimer > 0)
+        {
+            shotTimer--;
+        }
+        else
+        {
         Missile m = new Missile (targetX, targetY);
+        m.turnTowards(targetX, targetY);
         getWorld().addObject (m, this.getX(), this.getY());
+        shotTimer = 50;
+        }
     }
     
     /**
@@ -39,33 +50,21 @@ public class TurretGun extends Actor
         public void act() 
     {
         // Add your action code here.
-        Stage1 stage1 = (Stage1) getWorld();
+        try
+        {
+            Stage1 stage1 = (Stage1) getWorld();
+            int targetX = stage1.playerShip.getX();
+            int targetY = stage1.playerShip.getY();
         
-        int targetX = stage1.playerShip.getX();
-        int targetY = stage1.playerShip.getY();
-        
-        setLocation(getX() - 1, getY());
-        shoot(targetX, targetY);
-        turnTowards(targetX, targetY);
-        
-        
-        
-        if (atWorldEdge())
-           getWorld().removeObject(this);
+            setLocation(getX() - 1, getY());
+       
+            shoot(targetX, targetY);
+            turnTowards(targetX, targetY);
+        }
+        catch (IllegalStateException e)
+        {
+            //do nothing
+        }
     }    
-        /**
-     * Checks if this Actor is at the edge of the World
-     * 
-     * @return boolean  true if at edge of the World, otherwise false
-     */
-    public boolean atWorldEdge ()
-    {
-        int maxX = getWorld().getBackground().getWidth();
-        int maxY = getWorld().getBackground().getHeight();
-        if (getX() <= 0 || getX() >= maxX - 1)
-        { return true; }
-        if (getY() <= 0 || getY() >= maxY - 1)
-        { return true; }
-        return false;
-    }
+
 }

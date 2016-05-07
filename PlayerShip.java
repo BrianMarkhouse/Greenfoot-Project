@@ -8,23 +8,24 @@ import greenfoot.*;
  */
 public class PlayerShip extends Actor
 {
-    
-            public void shoot (int targetX, int targetY)
+    private int speed = 13;
+    int shotTimer = 10;
+    public void shoot (int targetX, int targetY)
     {
         Missile m = new Missile (targetX, targetY);
         getWorld().addObject (m, this.getX(), this.getY());
     }
     public void movement()
-{
-    if(Greenfoot.isKeyDown("right")) move(3);
-    turn(90);
-    if(Greenfoot.isKeyDown("down")) move(3);
-    turn(90);
-    if(Greenfoot.isKeyDown("left")) move(3);
-    turn(90);
-    if(Greenfoot.isKeyDown("up")) move(3);
-    turn(90);
-}
+    {
+        if(Greenfoot.isKeyDown("right")) move(speed);
+            turn(90);
+        if(Greenfoot.isKeyDown("down")) move(speed);
+            turn(90);
+        if(Greenfoot.isKeyDown("left")) move(speed);
+            turn(90);
+        if(Greenfoot.isKeyDown("up")) move(speed);
+            turn(90);
+    }
     /**
      * Act - do whatever the PlayerShip wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -32,8 +33,16 @@ public class PlayerShip extends Actor
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.isKeyDown("z")){
-        this.shoot(1200, this.getY());
+        if (shotTimer > 0)
+        {
+            shotTimer--;
+        }
+        if (Greenfoot.isKeyDown("z") && shotTimer == 0)
+        {
+            PShot1 shot = new PShot1();
+            getWorld().addObject(shot, getX(), getY() );
+            shotTimer = 10;
+
         }
         movement();
     }    
