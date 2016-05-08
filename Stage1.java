@@ -13,7 +13,7 @@ public class Stage1 extends World
     Color color1 = new Color(123,230,30);
     Color color2 = new Color(123,150,230);
     Color color3 = new Color(123,50,200);
-    int a, b, c;
+    int a, b, c, d;
     public PlayerShip playerShip;
     
     
@@ -32,10 +32,12 @@ public class Stage1 extends World
         image.fill();
         star();
         
-        TurretBase turretBase = new TurretBase();
+        //TurretBase turretBase = new TurretBase();
         playerShip = new PlayerShip();
-        addObject (turretBase, 1000, 450);
+        Surge surge = new Surge(1100, 450);
+        addObject (surge, 1100, 450);
         addObject (playerShip, 100, 450);
+        
         
 
     }
@@ -69,15 +71,24 @@ public class Stage1 extends World
             //addObject (new Star (radius, new Color(r, g, b)), x, y);
         }
     }
-    
+    //public Surge spawnSurge()
+    //{
+     //   return new Surge();
+    //}
     public void act()
     {
         setPaintOrder(TurretBase.class);
-            for(int i = 0; i<210; i++){
-                if(stars[i] != null) {
-                    stars[i].move();
-                }
+        
+        for(int i = 0; i<210; i++){
+            if(stars[i] != null) {
+                stars[i].move();
             }
-
+        }
+        d = Greenfoot.getRandomNumber(200);
+        if (d == 20)
+        {
+            d = Greenfoot.getRandomNumber(400) + 200;
+            addObject(new Surge(1000, d), 1000, d);
+        }
     }
 }

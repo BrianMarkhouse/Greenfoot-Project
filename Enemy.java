@@ -20,6 +20,6 @@ public class Enemy extends Actor
     
     public void takeDamage(int d)
     {
-
+        
     }
 }
