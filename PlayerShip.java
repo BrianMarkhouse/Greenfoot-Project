@@ -39,7 +39,7 @@ public class PlayerShip extends Actor
         }
         if (Greenfoot.isKeyDown("z") && shotTimer == 0)
         {
-            PShot3 shot = new PShot3();
+            PShot1 shot = new PShot1();
             getWorld().addObject(shot, getX(), getY() );
             shotTimer = 10;
 

@@ -16,6 +16,8 @@ public class Instructions extends World
     public Instructions()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1200, 900, 1); 
+        Actor back = new BackButton();
+        addObject(back, 210, 850);
     }
 }

@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BackButton extends Buttons
 {
+    public void MainMenu(){
+       World mm = new MainMenu();
+       Greenfoot.setWorld(mm);
+    }
     /**
      * Act - do whatever the BackButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +19,8 @@ public class BackButton extends Buttons
     public void act() 
     {
         // Add your action code here.
+        if(Greenfoot.mouseClicked(this)){
+        MainMenu();
+        }
     }    
 }
