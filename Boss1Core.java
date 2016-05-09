@@ -1,29 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Heavy here.
+ * Write a description of class Boss1Core here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Heavy extends Enemy
+public class Boss1Core extends Enemy
 {
-    private int health = 3;
-    private int speed = 40;
-    private int shotTimer = 10;
+    private Boss1Body body = new Boss1Body();
+    private int health = 100;
+    private int shotTimer = 50;
     /**
      * Act - do whatever the Heavy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-         if (this.isAtEdge() == true)
-        {
-            getWorld().removeObject(this);
-            return;
-        }
-        setLocation(getX() - speed/4, getY() );
-        speed--;
+        getWorld().addObject(body, getX(), getY() );
         shoot();
     }
     public void takeDamage(int d)
@@ -31,12 +25,10 @@ public class Heavy extends Enemy
         health -= d;
         if (health <= 0)
         {
-            int a = Greenfoot.getRandomNumber(3);
-            if (a == 2)
-            {
-                getWorld().addObject(new WepPow(), getX(), getY() );
-            }
-            getWorld().removeObject(this);
+            Stage1 s = (Stage1)getWorld();
+            s.removeObject(body);
+            s.victory();
+            s.removeObject(this);
             return;
         }
     }
@@ -49,8 +41,7 @@ public class Heavy extends Enemy
         else
         {
         getWorld().addObject (new HeavyShot(), this.getX(), this.getY());
-        shotTimer = 30;
+        shotTimer = 50;
         }
-    }
-    
+    }  
 }

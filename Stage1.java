@@ -8,7 +8,7 @@ import java.awt.Color;
  */
 public class Stage1 extends World
 {
-    
+    private int timer = 3000;
     private Star[]stars = new Star[210];
     Color color1 = new Color(123,230,30);
     Color color2 = new Color(123,150,230);
@@ -16,8 +16,6 @@ public class Stage1 extends World
     int a, b, c, d;
     public PlayerShip playerShip;
     
-    
-    //private TurretGun turretGun;
     /**
      * Constructor for objects of class Stage1.
      * 
@@ -71,10 +69,16 @@ public class Stage1 extends World
             //addObject (new Star (radius, new Color(r, g, b)), x, y);
         }
     }
-    //public Surge spawnSurge()
-    //{
-     //   return new Surge();
-    //}
+    public void victory()
+    {
+        int toWait = 100;
+        for (int i = 0; i < toWait; i++)
+        {
+            //stalling for time
+        }
+        World hs = new HighScores();
+        Greenfoot.setWorld(hs);
+    }
     public void act()
     {
         setPaintOrder(TurretBase.class);
@@ -84,21 +88,30 @@ public class Stage1 extends World
                 stars[i].move();
             }
         }
-        d = Greenfoot.getRandomNumber(600);
-        if (d <= 5)
+        if (timer > 500)
         {
-            d = Greenfoot.getRandomNumber(800) + 50;
-            addObject(new Surge(1000, d), 1000, d - 400);
+            d = Greenfoot.getRandomNumber(timer/5);
+            if (d <= 2)
+            {
+                d = Greenfoot.getRandomNumber(800) + 50;
+                addObject(new Surge(1000, d), 1000, d);
+            }
+            else if (d <= 4)
+            {
+                d = Greenfoot.getRandomNumber(800) + 50;
+                addObject(new Heavy(), 1000, d);
+            }
+            else if (d <=  5)
+            {
+                d = Greenfoot.getRandomNumber(800) + 50;
+                addObject(new TurretBase(), 950, d);
+            }
+            timer--;
         }
-        else if (d <= 10)
+        else if (timer == 500)
         {
-            d = Greenfoot.getRandomNumber(800) + 50;
-            addObject(new Heavy(), 1000, d - 400);
-        }
-        else if (d <= 15)
-        {
-            d = Greenfoot.getRandomNumber(800) + 50;
-            addObject(new TurretBase(), 1000, d - 400);
+            addObject(new Boss1Core(),  800, 450);
+            timer--;
         }
     }
 }

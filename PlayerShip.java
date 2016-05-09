@@ -9,11 +9,14 @@ import greenfoot.*;
 public class PlayerShip extends Actor
 {
     private int speed = 13;
-    int shotTimer = 10;
-    public void shoot (int targetX, int targetY)
+    private int shotTimer = 10;
+    private int weaponLvl = 1;
+    public void levelWeaponUp()
     {
-        Missile m = new Missile (targetX, targetY);
-        getWorld().addObject (m, this.getX(), this.getY());
+        if (weaponLvl < 3)
+        {
+            weaponLvl++;
+        }
     }
     public void movement()
     {
@@ -39,10 +42,24 @@ public class PlayerShip extends Actor
         }
         if (Greenfoot.isKeyDown("z") && shotTimer == 0)
         {
-            PShot1 shot = new PShot1();
-            getWorld().addObject(shot, getX(), getY() );
-            shotTimer = 10;
-
+            if (weaponLvl == 1)
+            {
+                PShot1 shot = new PShot1();
+                getWorld().addObject(shot, getX(), getY() );
+                shotTimer = 10;
+            }
+            if (weaponLvl == 2)
+            {
+                PShot2 shot = new PShot2();
+                getWorld().addObject(shot, getX(), getY() );
+                shotTimer = 10;
+            }
+            else if (weaponLvl == 3)
+            {
+                PShot3 shot = new PShot3();
+                getWorld().addObject(shot, getX(), getY() );
+                shotTimer = 10;
+            }
         }
         movement();
     }    
