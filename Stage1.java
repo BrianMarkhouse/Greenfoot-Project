@@ -84,11 +84,21 @@ public class Stage1 extends World
                 stars[i].move();
             }
         }
-        d = Greenfoot.getRandomNumber(200);
-        if (d == 20)
+        d = Greenfoot.getRandomNumber(600);
+        if (d <= 5)
         {
-            d = Greenfoot.getRandomNumber(400) + 200;
-            addObject(new Surge(1000, d), 1000, d);
+            d = Greenfoot.getRandomNumber(800) + 50;
+            addObject(new Surge(1000, d), 1000, d - 400);
+        }
+        else if (d <= 10)
+        {
+            d = Greenfoot.getRandomNumber(800) + 50;
+            addObject(new Heavy(), 1000, d - 400);
+        }
+        else if (d <= 15)
+        {
+            d = Greenfoot.getRandomNumber(800) + 50;
+            addObject(new TurretBase(), 1000, d - 400);
         }
     }
 }

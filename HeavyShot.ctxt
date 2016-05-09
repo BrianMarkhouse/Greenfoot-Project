@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=HeavyShot
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ HeavyShot\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=boolean\ atWorldEdge()
+comment2.text=\r\n\ Checks\ if\ this\ Actor\ is\ at\ the\ edge\ of\ the\ World\r\n\ \r\n\ @return\ boolean\ \ true\ if\ at\ edge\ of\ the\ World,\ otherwise\ false\r\n
+numComments=3
