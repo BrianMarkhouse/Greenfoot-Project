@@ -13,6 +13,7 @@ public class Surge extends Enemy
     private int spawnTimer = 10;
     private int spawnCount = 0;
     private int x, y; //initial spawn coordinates used to spawn the rest of the group
+    private int score = 50;
     
     /**
      * Surge Constructor
@@ -48,7 +49,9 @@ public class Surge extends Enemy
         health -= d;
         if (health <= 0)
         {
-            getWorld().removeObject(this);
+            Stage1 stage = (Stage1)getWorld();
+            stage.addScore(score);
+            stage.removeObject(this);
             return;
         }
     }

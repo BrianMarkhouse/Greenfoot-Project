@@ -14,6 +14,7 @@ public class Missile extends Projectile
     private int targX, targY;
     private boolean hitTarget;
     private int speed;
+    private int damage = 1;
    
     /**
      * Construct a Missile given a target coordinate
@@ -31,7 +32,14 @@ public class Missile extends Projectile
 
     public void act() 
     {
-        if(isTouching(PlayerShip.class) )
+        if(isTouching(PShield.class) )
+        {
+            PShield s = (PShield)getOneIntersectingObject(PShield.class);
+            s.takeDamage(damage);
+            getWorld().removeObject(this);
+            return;
+        }
+        else if(isTouching(PlayerShip.class) )
         {
             removeTouching(PlayerShip.class);
             getWorld().removeObject(this);

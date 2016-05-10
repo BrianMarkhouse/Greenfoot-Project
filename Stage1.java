@@ -8,7 +8,7 @@ import java.awt.Color;
  */
 public class Stage1 extends World
 {
-    private int timer = 3000;
+    private int timer = 4000;
     //as the timer goes down the enemies spawn more frequently and at a cetain time they stop spawning and the boss appears
     private Star[]stars = new Star[210];
     Color color1 = new Color(123,230,30);
@@ -16,6 +16,8 @@ public class Stage1 extends World
     Color color3 = new Color(123,50,200);
     int a, b, c, d;
     public PlayerShip playerShip;
+    private int score = 0;
+    private ScoreDisplay scoreDisplay;
     
     /**
      * Constructor for objects of class Stage1.
@@ -33,14 +35,16 @@ public class Stage1 extends World
         
         //TurretBase turretBase = new TurretBase();
         playerShip = new PlayerShip();
-        Surge surge = new Surge(1100, 450);
-        addObject (surge, 1100, 450);
-        addObject (playerShip, 100, 450);
+        scoreDisplay = new ScoreDisplay();
+        addObject(scoreDisplay, 100, 50);
+        addObject(playerShip, 100, 450);
         
-        
-
     }
-    
+    public void addScore(int s)
+    {
+        score += s;
+        scoreDisplay.setScore(score);
+    }
     private void star()
     {
         
@@ -82,14 +86,14 @@ public class Stage1 extends World
     }
     public void act()
     {
-        setPaintOrder(TurretBase.class);
+        setPaintOrder(TurretBase.class, PlayerShip.class);
         
         for(int i = 0; i<210; i++){
             if(stars[i] != null) {
                 stars[i].move();
             }
         }
-        if (timer > 500)
+        if (timer > 600)
         {
             d = Greenfoot.getRandomNumber(timer/5);
             if (d <= 2)
@@ -109,7 +113,7 @@ public class Stage1 extends World
             }
             timer--;
         }
-        else if (timer == 500)
+        else if (timer == 600)
         {
             addObject(new Boss1Core(),  800, 450);
             timer--;

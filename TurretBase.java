@@ -11,6 +11,7 @@ public class TurretBase extends Enemy
     private TurretGun gun = new TurretGun();
     private int speed = 3;
     private int health = 5;
+    private int score = 300;
     
     public void act() 
     {
@@ -18,8 +19,9 @@ public class TurretBase extends Enemy
         getWorld().addObject(gun, getX(), getY() );
         if (this.isAtEdge() == true)
         {
-            getWorld().removeObject(gun);
-            getWorld().removeObject(this);
+            Stage1 stage = (Stage1)getWorld();
+            stage.removeObject(gun);
+            stage.removeObject(this);
             return;
         }
         setLocation(getX() - speed, getY() );
@@ -36,8 +38,10 @@ public class TurretBase extends Enemy
         health -= d;
         if (health <= 0)
         {
-            getWorld().removeObject(gun);
-            getWorld().removeObject(this);
+            Stage1 stage = (Stage1)getWorld();
+            stage.addScore(score);
+            stage.removeObject(gun);
+            stage.removeObject(this);
             return;
         }
     }

@@ -11,6 +11,9 @@ public class PlayerShip extends Actor
     private int speed = 13;
     private int shotTimer = 10;
     private int weaponLvl = 1;
+    PShield shield = new PShield();
+    private boolean shieldOn = true;
+    
     public void levelWeaponUp()
     {
         if (weaponLvl < 3)
@@ -18,21 +21,49 @@ public class PlayerShip extends Actor
             weaponLvl++;
         }
     }
+    public void setShieldOn(boolean o)
+    {
+        shieldOn = o;
+    }
     public void movement()
     {
-        if(Greenfoot.isKeyDown("right")) move(speed);
+        if(Greenfoot.isKeyDown("right")) 
+        {
+            move(speed);
+            shield.move(speed);
+        }
             turn(90);
-        if(Greenfoot.isKeyDown("down")) move(speed);
+            shield.turn(90);
+        if(Greenfoot.isKeyDown("down")) 
+        {
+            move(speed);
+            shield.move(speed);
+        }
             turn(90);
-        if(Greenfoot.isKeyDown("left")) move(speed);
+            shield.turn(90);
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(speed);
+            shield.move(speed);
+        }
             turn(90);
-        if(Greenfoot.isKeyDown("up")) move(speed);
+            shield.turn(90);
+        if(Greenfoot.isKeyDown("up")) 
+        {
+            move(speed);
+            shield.move(speed);
+        }
             turn(90);
+            shield.turn(90);
     }
 
     public void act() 
     {
-        // Add your action code here.
+        if (shieldOn == true)
+        {
+            getWorld().addObject(shield, getX()-20, getY() );
+            shieldOn = false;
+        }
         if (shotTimer > 0)
         {
             shotTimer--;
