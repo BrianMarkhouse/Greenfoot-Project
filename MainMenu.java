@@ -12,6 +12,8 @@ public class MainMenu extends World
     Actor newGame = new NewGameButton();
     Actor highScores = new HighScoresButton();
     Actor instructions = new InstructionsButton();
+
+
     /**
      * Constructor for objects of class menu.
      * 
