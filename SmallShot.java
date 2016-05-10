@@ -9,9 +9,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SmallShot extends Projectile
 {
     private int speed = 10;
+    private int damage = 1;
+    
     public void act() 
     {
-        if(isTouching(PlayerShip.class) )
+        if(isTouching(PShield.class) )
+        {
+            PShield s = (PShield)getOneIntersectingObject(PShield.class);
+            s.takeDamage(damage);
+            getWorld().removeObject(this);
+            return;
+        }
+        else if(isTouching(PlayerShip.class) )
         {
             removeTouching(PlayerShip.class);
             getWorld().removeObject(this);
