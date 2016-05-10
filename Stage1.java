@@ -99,23 +99,23 @@ public class Stage1 extends World
             if (d <= 2)
             {
                 d = Greenfoot.getRandomNumber(800) + 50;
-                addObject(new Surge(1000, d), 1000, d);
+                addObject(new Surge(getWidth()-50, d), getWidth()-50, d);
             }
             else if (d <= 4)
             {
                 d = Greenfoot.getRandomNumber(800) + 50;
-                addObject(new Heavy(), 1000, d);
+                addObject(new Heavy(), getWidth()-50, d);
             }
             else if (d <=  5)
             {
                 d = Greenfoot.getRandomNumber(800) + 50;
-                addObject(new TurretBase(), 950, d);
+                addObject(new TurretBase(), getWidth()-50, d);
             }
             timer--;
         }
         else if (timer == 600)
         {
-            addObject(new Boss1Core(),  800, 450);
+            addObject(new Boss1Core(),  900, 450);
             timer--;
         }
     }

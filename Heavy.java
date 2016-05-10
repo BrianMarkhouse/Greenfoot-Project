@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Heavy extends Enemy
 {
     private int health = 3;
-    private int speed = 40;
+    private int speed = 60;
     private int shotTimer = 10;
 
     public void act() 
@@ -19,7 +19,7 @@ public class Heavy extends Enemy
             getWorld().removeObject(this);
             return;
         }
-        setLocation(getX() - speed/4, getY() ); // the division of speed causes speed to change at a slower rate
+        setLocation(getX() - speed/5, getY() ); // the division of speed causes speed to change at a slower rate
         speed--;
         shoot();
     }
