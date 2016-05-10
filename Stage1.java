@@ -3,12 +3,13 @@ import java.awt.Color;
 /**
  * Write a description of class Stage1 here.
  * 
- * @author (your name) 
+ * @author Brian Markhouse, Jim Hunter
  * @version (a version number or a date)
  */
 public class Stage1 extends World
 {
     private int timer = 3000;
+    //as the timer goes down the enemies spawn more frequently and at a cetain time they stop spawning and the boss appears
     private Star[]stars = new Star[210];
     Color color1 = new Color(123,230,30);
     Color color2 = new Color(123,150,230);
@@ -74,7 +75,7 @@ public class Stage1 extends World
         int toWait = 100;
         for (int i = 0; i < toWait; i++)
         {
-            //stalling for time
+            //stalling for time, doesnt work
         }
         World hs = new HighScores();
         Greenfoot.setWorld(hs);
