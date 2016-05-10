@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PShot1 here.
+ * level 1 projectile for the player
  * 
- * @author (your name) 
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class PShot1 extends PShot

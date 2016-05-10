@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boss1Body here.
- * 
- * @author (your name) 
+ * the bosses body is not damageable so it is not considered an enemy
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class Boss1Body extends Actor
 {
     private int shotTimer = 50;
+    
     public void shoot (int targetX, int targetY)
     {
         if (shotTimer > 0)
@@ -45,6 +45,7 @@ public class Boss1Body extends Actor
         catch (IllegalStateException e)
         {
             //do nothing
+            //this is for when the player is destroyed
         }
     }    
 }
