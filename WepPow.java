@@ -8,19 +8,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class WepPow extends Actor
 {
     private int speed = 3;
+    private int score = 200;
 
     public void act() 
     {
         if (this.isAtEdge() == true)
         {
-            getWorld().removeObject(this);
+            Stage1 stage = (Stage1)getWorld();
+            stage.addScore(score);
+            stage.removeObject(this);
             return;
         }
         if (isTouching(PlayerShip.class) )
         {
             PlayerShip p = (PlayerShip)getOneIntersectingObject(PlayerShip.class);
             p.levelWeaponUp();
-            getWorld().removeObject(this);
+            Stage1 stage = (Stage1)getWorld();
+            stage.addScore(score);
+            stage.removeObject(this);
             return;
         }
         setLocation(getX() - speed, getY() );

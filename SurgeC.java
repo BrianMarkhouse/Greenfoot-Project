@@ -10,6 +10,7 @@ public class SurgeC extends Enemy
 {
     private int health = 1;
     private int speed = 5;
+    private int score = 50;
 
     public void act() 
     {
@@ -29,7 +30,9 @@ public class SurgeC extends Enemy
         health -= d;
         if (health <= 0)
         {
-            getWorld().removeObject(this);
+            Stage1 stage = (Stage1)getWorld();
+            stage.addScore(score);
+            stage.removeObject(this);
             return;
         }
     }

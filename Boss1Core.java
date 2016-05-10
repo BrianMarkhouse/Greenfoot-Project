@@ -11,6 +11,7 @@ public class Boss1Core extends Enemy
     private Boss1Body body = new Boss1Body();
     private int health = 100;
     private int shotTimer = 50;
+    private int score = 10000;
 
     public void act() 
     {
@@ -23,6 +24,7 @@ public class Boss1Core extends Enemy
         if (health <= 0)
         {
             Stage1 s = (Stage1)getWorld();
+            s.addScore(score);
             s.removeObject(body);
             s.victory(); //send the player to the high score screen
             s.removeObject(this);
