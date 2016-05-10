@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boss1Core here.
+ * Boss1's core
  * 
- * @author (your name) 
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class Boss1Core extends Enemy
@@ -11,10 +11,7 @@ public class Boss1Core extends Enemy
     private Boss1Body body = new Boss1Body();
     private int health = 100;
     private int shotTimer = 50;
-    /**
-     * Act - do whatever the Heavy wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
         getWorld().addObject(body, getX(), getY() );
@@ -27,7 +24,7 @@ public class Boss1Core extends Enemy
         {
             Stage1 s = (Stage1)getWorld();
             s.removeObject(body);
-            s.victory();
+            s.victory(); //send the player to the high score screen
             s.removeObject(this);
             return;
         }

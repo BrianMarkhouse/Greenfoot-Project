@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=SmallShot
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ SmallShot\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ small\ enemy\ projectile\ without\ any\ tracking\r\n\ \r\n\ @author\ Brian\ Markhouse\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

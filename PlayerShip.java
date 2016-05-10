@@ -1,9 +1,9 @@
 import greenfoot.*;
 
 /**
- * Write a description of class PlayerShip here.
+ * The player's ship
  * 
- * @author (your name) 
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class PlayerShip extends Actor
@@ -29,10 +29,7 @@ public class PlayerShip extends Actor
         if(Greenfoot.isKeyDown("up")) move(speed);
             turn(90);
     }
-    /**
-     * Act - do whatever the PlayerShip wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
         // Add your action code here.

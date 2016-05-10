@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Heavy here.
+ * Heavy enemy
  * 
- * @author (your name) 
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class Heavy extends Enemy
@@ -11,10 +11,7 @@ public class Heavy extends Enemy
     private int health = 3;
     private int speed = 40;
     private int shotTimer = 10;
-    /**
-     * Act - do whatever the Heavy wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
          if (this.isAtEdge() == true)
@@ -22,7 +19,7 @@ public class Heavy extends Enemy
             getWorld().removeObject(this);
             return;
         }
-        setLocation(getX() - speed/4, getY() );
+        setLocation(getX() - speed/4, getY() ); // the division of speed causes speed to change at a slower rate
         speed--;
         shoot();
     }
@@ -34,7 +31,7 @@ public class Heavy extends Enemy
             int a = Greenfoot.getRandomNumber(3);
             if (a == 2)
             {
-                getWorld().addObject(new WepPow(), getX(), getY() );
+                getWorld().addObject(new WepPow(), getX(), getY() ); //chance to spawn weapon power up
             }
             getWorld().removeObject(this);
             return;

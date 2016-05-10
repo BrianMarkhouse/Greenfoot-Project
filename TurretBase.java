@@ -1,9 +1,9 @@
 import greenfoot.*;
 
 /**
- * Write a description of class turretbase here.
+ * Turret enemy
  * 
- * @author (your name) 
+ * @author Brian Markhouse 
  * @version (a version number or a date)
  */
 public class TurretBase extends Enemy
@@ -12,10 +12,6 @@ public class TurretBase extends Enemy
     private int speed = 3;
     private int health = 5;
     
-    /**
-     * Act - do whatever the turretbase wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         // Add your action code here.
@@ -28,7 +24,7 @@ public class TurretBase extends Enemy
         }
         setLocation(getX() - speed, getY() );
 
-        moveGun(speed);
+        moveGun(speed); //keeping the turret's gun in the same place as the turret
     }
     public void moveGun(int speed)
     {

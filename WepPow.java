@@ -1,18 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WepPow here.
- * 
- * @author (your name) 
+ * increases the weapon level of the player when they pass over this
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class WepPow extends Actor
 {
     private int speed = 3;
-    /**
-     * Act - do whatever the WepPow wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
         if (this.isAtEdge() == true)
