@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PShot3 here.
+ * level 3 projectile for the player
  * 
- * @author (your name) 
+ * @author Brian Markhouse 
  * @version (a version number or a date)
  */
 public class PShot3 extends PShot
@@ -11,10 +11,11 @@ public class PShot3 extends PShot
     private int speed = 15;
     private int damage = 3;
     
-    /**
-     * Act - do whatever the PShot1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public PShot3()
+    {
+        setImage("PShot3.png");
+    }
+    
     public void act() 
     {
         move(speed);
@@ -25,7 +26,7 @@ public class PShot3 extends PShot
             return;
         }
         if (isTouching(Surge.class) || isTouching(SurgeC.class) )
-        {
+        { //this is so the shots can destroy multiple surge enemies
             Enemy e = (Enemy)getOneIntersectingObject(Enemy.class);
             e.takeDamage(damage);
             damage--;

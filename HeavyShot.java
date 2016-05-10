@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class HeavyShot here.
+ * large enemy projectile without any tracking
  * 
- * @author (your name) 
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class HeavyShot extends Projectile

@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=Surge
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Surge\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ enemy\ that\ spawns\ a\ group\ of\ similiar\ enemies\r\n\ \r\n\ @author\ Brian\ Markhouse\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=x\ y
 comment1.target=Surge(int,\ int)
+comment1.text=\r\n\ Surge\ Constructor\r\n\r\n\ @param\ x\ initial\ x\ coordinate\r\n\ @param\ y\ initial\ y\ coordinate\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Surge\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment3.params=d
 comment3.target=void\ takeDamage(int)
 comment4.params=

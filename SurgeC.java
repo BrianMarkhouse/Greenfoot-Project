@@ -1,19 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Surge here.
+ * surge that is spawned by the first surge of the group
  * 
- * @author (your name) 
+ * @author Brian Markhouse 
  * @version (a version number or a date)
  */
 public class SurgeC extends Enemy
 {
     private int health = 1;
     private int speed = 5;
-    /**
-     * Act - do whatever the Surge wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act() 
     {
         if (this.isAtEdge() == true)
@@ -24,6 +21,7 @@ public class SurgeC extends Enemy
         double amplitude = 5.0;
         double frequency = 2.0;
         setLocation(getX()-speed, getY()+(int)(Math.sin((double)(getX()+speed)*frequency/95.5)*amplitude));
+        //move in a sine wave pattern
         shoot();
     }    
     public void takeDamage(int d)

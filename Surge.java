@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Surge here.
+ * enemy that spawns a group of similiar enemies
  * 
- * @author (your name) 
+ * @author Brian Markhouse
  * @version (a version number or a date)
  */
 public class Surge extends Enemy
@@ -12,18 +12,20 @@ public class Surge extends Enemy
     private int speed = 5;
     private int spawnTimer = 10;
     private int spawnCount = 0;
-    private int x, y;
+    private int x, y; //initial spawn coordinates used to spawn the rest of the group
     
+    /**
+     * Surge Constructor
+     *
+     * @param x initial x coordinate
+     * @param y initial y coordinate
+     */
     public Surge(int x, int y)
     {
         this.x = x;
         this.y = y;
     }
     
-    /**
-     * Act - do whatever the Surge wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         if (this.isAtEdge() == true)
@@ -34,6 +36,7 @@ public class Surge extends Enemy
         double amplitude = 5.0;
         double frequency = 2.0;
         setLocation(getX()-speed, getY()+(int)(Math.sin((double)(getX()+speed)*frequency/95.5)*amplitude));
+        //moving in a sine wave pattern
         if (spawnCount < 5)
         {
             spawnGroup();
