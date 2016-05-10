@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Write a description of class menu here.
  * 
- * @author (your name) 
+ * @author Jim Hunter
  * @version (a version number or a date)
  */
 public class MainMenu extends World

@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Write a description of class HighScores here.
  * 
- * @author (your name) 
+ * @author Jim Hunter 
  * @version (a version number or a date)
  */
 public class HighScores extends World

@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Write a description of class button here.
  * 
- * @author (your name) 
+ * @author  Jim Hunter 
  * @version (a version number or a date)
  */
 public class Stage1Button extends Buttons
