@@ -118,5 +118,17 @@ public class Stage1 extends World
             addObject(new Boss1Core(),  900, 450);
             timer--;
         }
+        
+        /*  death conditional
+           Actor mb = new MenuButton();
+           Actor rb = new RetryButton();
+           Actor go = new GameOver();
+        
+           addObject(go, getWidth()/2, getHeight()/2);
+           addObject(rb, getWidth()/2 - 140, getHeight()/2 + 200);
+           addObject(mb, getWidth()/2 + 140, getHeight()/2 + 200);
+          */ 
+        
+        
     }
 }
