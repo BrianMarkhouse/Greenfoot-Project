@@ -11,7 +11,8 @@ public class Heavy extends Enemy
     private int health = 3;
     private int speed = 60;
     private int shotTimer = 10;
-
+    private int score = 300;
+    
     public void act() 
     {
          if (this.isAtEdge() == true)
@@ -33,6 +34,8 @@ public class Heavy extends Enemy
             {
                 getWorld().addObject(new WepPow(), getX(), getY() ); //chance to spawn weapon power up
             }
+            Stage1 stage = (Stage1)getWorld();
+            stage.addScore(score);
             getWorld().removeObject(this);
             return;
         }

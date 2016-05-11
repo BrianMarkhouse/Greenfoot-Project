@@ -11,7 +11,7 @@ public class TurretBase extends Enemy
     private TurretGun gun = new TurretGun();
     private int speed = 3;
     private int health = 5;
-    private int score = 300;
+    private int score = 500;
     
     public void act() 
     {
