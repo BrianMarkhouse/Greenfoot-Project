@@ -15,6 +15,7 @@ public class HeavyShot extends Projectile
         {
             removeTouching(PlayerShip.class);
             getWorld().removeObject(this);
+            Greenfoot.playSound("death.wav");
             return;
         }
         // Move in the direction I am facing

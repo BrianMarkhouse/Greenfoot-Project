@@ -23,6 +23,7 @@ public class WepPow extends Actor
         {
             PlayerShip p = (PlayerShip)getOneIntersectingObject(PlayerShip.class);
             p.levelWeaponUp();
+            Greenfoot.playSound("powerup.wav");
             Stage1 stage = (Stage1)getWorld();
             stage.addScore(score);
             stage.removeObject(this);

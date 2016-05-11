@@ -28,6 +28,7 @@ public class Boss1Core extends Enemy
             s.removeObject(body);
             s.victory(); //send the player to the high score screen
             s.removeObject(this);
+            
             return;
         }
     }
@@ -40,6 +41,7 @@ public class Boss1Core extends Enemy
         else
         {
         getWorld().addObject (new HeavyShot(), this.getX(), this.getY());
+        Greenfoot.playSound("shot2.wav");
         shotTimer = 50;
         }
     }  

@@ -43,6 +43,7 @@ public class Missile extends Projectile
         {
             removeTouching(PlayerShip.class);
             getWorld().removeObject(this);
+            Greenfoot.playSound("death.wav");
             return;
         }
         // If I have come within 10 pixels of my destination, I no longer

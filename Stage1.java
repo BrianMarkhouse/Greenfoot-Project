@@ -116,6 +116,7 @@ public class Stage1 extends World
         else if (timer == 600)
         {
             addObject(new Boss1Core(),  900, 450);
+            Greenfoot.playSound("bossSpawn.wav");
             timer--;
         }
         

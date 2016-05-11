@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue May 10 22:47:15 CDT 2016
+#Wed May 11 00:41:48 CDT 2016
 target24.type=ClassTarget
 target16.name=InstructionsButton
 target13.editor.width=900
@@ -436,7 +436,7 @@ class.MainMenu.superclass=greenfoot.World
 dependency55.type=UsesDependency
 class.PShot1.image=PShot1.png
 target18.type=ClassTarget
-editor.swing.0.height=711
+editor.swing.0.height=700
 dependency30.type=UsesDependency
 class.GameOver.superclass=Windows
 target21.showInterface=false
@@ -484,7 +484,7 @@ target27.y=850
 target27.x=10
 target34.typeParameters=
 dependency58.to=PShield
-editor.swing.0.width=1143
+editor.swing.0.width=700
 target29.naviview.expanded=false
 publish.shortDesc=
 target29.height=50

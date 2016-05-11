@@ -50,6 +50,7 @@ public class Heavy extends Enemy
         {
         getWorld().addObject (new HeavyShot(), this.getX(), this.getY());
         shotTimer = 30;
+        Greenfoot.playSound("shot2.wav");
         }
     }
     

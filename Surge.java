@@ -71,6 +71,7 @@ public class Surge extends Enemy
         if (a == 2)
         {
             getWorld().addObject (new SmallShot(), this.getX(), this.getY());
+            Greenfoot.playSound("shot3.wav");
         }
     }
 }

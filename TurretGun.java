@@ -33,6 +33,7 @@ public class TurretGun extends Actor
         Missile m = new Missile (targetX, targetY);
         m.turnTowards(targetX, targetY);
         getWorld().addObject (m, this.getX(), this.getY());
+        Greenfoot.playSound("shot2.wav");
         shotTimer = 50;
         }
     }

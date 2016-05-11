@@ -74,18 +74,21 @@ public class PlayerShip extends Actor
             {
                 PShot1 shot = new PShot1();
                 getWorld().addObject(shot, getX(), getY() );
+                Greenfoot.playSound("shot5.wav");
                 shotTimer = 10;
             }
             if (weaponLvl == 2)
             {
                 PShot2 shot = new PShot2();
                 getWorld().addObject(shot, getX(), getY() );
+                Greenfoot.playSound("shot4.wav");
                 shotTimer = 10;
             }
             else if (weaponLvl == 3)
             {
                 PShot3 shot = new PShot3();
                 getWorld().addObject(shot, getX(), getY() );
+                Greenfoot.playSound("shot2.wav");
                 shotTimer = 10;
             }
         }
