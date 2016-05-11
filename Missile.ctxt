@@ -1,12 +1,10 @@
 #BlueJ class context
-comment0.target=Missile
-comment0.text=\r\n\ Missile\ is\ a\ projectile\ that\ will\ fly\ towards\ its\ destination,\ updating\r\n\ its\ trajectory\ as\ it\ flies\ to\ avoid\ bugs\ related\ to\ rounding\ in\ the\ \r\n\ turnTowards(x,y)\ method.\r\n\ \r\n\ @author\ Jordan\ Cohen\r\n\ @version\ May\ 2013\r\n
-comment1.params=targX\ targY
-comment1.target=Missile(int,\ int)
-comment1.text=\r\n\ Construct\ a\ Missile\ given\ a\ target\ coordinate\r\n\ \r\n\ @param\ int\ \ \ Target\ x\ coordinate\r\n\ @param\ int\ \ \ Target\ y\ coordinate\r\n
+comment0.params=targX\ targY
+comment0.target=Missile(int,\ int)
+comment0.text=\r\n\ Construct\ a\ Missile\ given\ a\ target\ coordinate\r\n\ \r\n\ @param\ int\ \ \ Target\ x\ coordinate\r\n\ @param\ int\ \ \ Target\ y\ coordinate\r\n
+comment1.params=
+comment1.target=void\ act()
 comment2.params=
-comment2.target=void\ act()
-comment3.params=
-comment3.target=boolean\ atWorldEdge()
-comment3.text=\r\n\ Checks\ if\ this\ Actor\ is\ at\ the\ edge\ of\ the\ World\r\n\ \r\n\ @return\ boolean\ \ true\ if\ at\ edge\ of\ the\ World,\ otherwise\ false\r\n
-numComments=4
+comment2.target=boolean\ atWorldEdge()
+comment2.text=\r\n\ Checks\ if\ this\ Actor\ is\ at\ the\ edge\ of\ the\ World\r\n\ \r\n\ @return\ boolean\ \ true\ if\ at\ edge\ of\ the\ World,\ otherwise\ false\r\n
+numComments=3

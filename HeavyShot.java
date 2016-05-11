@@ -9,14 +9,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HeavyShot extends Projectile
 {
     private int speed = 10;
+    private int damage = 1;
    
     public void act() 
     {
-        if(isTouching(PlayerShip.class) )
+        if(isTouching(PShield.class) )
         {
-            removeTouching(PlayerShip.class);
+            PShield s = (PShield)getOneIntersectingObject(PShield.class);
+            s.takeDamage(damage);
             getWorld().removeObject(this);
-            Greenfoot.playSound("death.wav");
+            return;
+        }
+        else if(isTouching(PlayerShip.class) )
+        {
+            PlayerShip s = (PlayerShip)getOneIntersectingObject(PlayerShip.class);
+            s.death();
+            getWorld().removeObject(this);
             return;
         }
         // Move in the direction I am facing

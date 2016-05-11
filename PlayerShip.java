@@ -25,6 +25,13 @@ public class PlayerShip extends Actor
     {
         shieldOn = o;
     }
+    public void death()
+    {
+        Stage1 s = (Stage1)getWorld();
+        s.gameOver();
+        Greenfoot.playSound("death.wav");
+        s.removeObject(this);
+    }
     public void movement()
     {
         if(Greenfoot.isKeyDown("right")) 
