@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HeavyShot extends Projectile
 {
     private int speed = 10;
+   
     public void act() 
     {
         if(isTouching(PlayerShip.class) )

@@ -26,6 +26,7 @@ public class MainMenu extends World
         addObject(newGame, 600, 550);
         addObject(highScores, 600, 640);
         addObject(instructions, 600, 730);
+
         
     }
     

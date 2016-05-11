@@ -11,7 +11,9 @@ public class SurgeC extends Enemy
     private int health = 1;
     private int speed = 5;
     private int score = 50;
-
+    private GreenfootSound s3 = new GreenfootSound("shot3.wav");
+    
+    
     public void act() 
     {
         if (this.isAtEdge() == true)
@@ -42,7 +44,8 @@ public class SurgeC extends Enemy
         if (a == 2)
         {
             getWorld().addObject (new SmallShot(), this.getX(), this.getY());
-            Greenfoot.playSound("shot3.wav");            
+            s3.setVolume(60);
+            s3.play();
         }
     }
 }

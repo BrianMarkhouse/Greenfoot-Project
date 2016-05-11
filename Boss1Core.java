@@ -12,6 +12,8 @@ public class Boss1Core extends Enemy
     private int health = 100;
     private int shotTimer = 50;
     private int score = 10000;
+    private GreenfootSound bs = new GreenfootSound("shot2.wav");
+
 
     public void act() 
     {
@@ -41,7 +43,7 @@ public class Boss1Core extends Enemy
         else
         {
         getWorld().addObject (new HeavyShot(), this.getX(), this.getY());
-        Greenfoot.playSound("shot2.wav");
+        bs.play();
         shotTimer = 50;
         }
     }  

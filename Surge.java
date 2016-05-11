@@ -14,6 +14,7 @@ public class Surge extends Enemy
     private int spawnCount = 0;
     private int x, y; //initial spawn coordinates used to spawn the rest of the group
     private int score = 50;
+    private GreenfootSound s3 = new GreenfootSound("shot3.wav");
     
     /**
      * Surge Constructor
@@ -71,7 +72,8 @@ public class Surge extends Enemy
         if (a == 2)
         {
             getWorld().addObject (new SmallShot(), this.getX(), this.getY());
-            Greenfoot.playSound("shot3.wav");
+            s3.setVolume(85);
+            s3.play();
         }
     }
 }

@@ -11,6 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TurretGun extends Actor
 {   
     private int shotTimer = 50;
+    private GreenfootSound s2 = new GreenfootSound("shot2.wav");
     // Aim toward x and y values passed in as parameters
     public void aim (int x, int y)
     {
@@ -33,7 +34,8 @@ public class TurretGun extends Actor
         Missile m = new Missile (targetX, targetY);
         m.turnTowards(targetX, targetY);
         getWorld().addObject (m, this.getX(), this.getY());
-        Greenfoot.playSound("shot2.wav");
+        s2.setVolume(85);
+        s2.play();
         shotTimer = 50;
         }
     }

@@ -12,6 +12,7 @@ public class Heavy extends Enemy
     private int speed = 60;
     private int shotTimer = 10;
     private int score = 300;
+    private GreenfootSound s2 = new GreenfootSound("shot2.wav");
     
     public void act() 
     {
@@ -50,7 +51,8 @@ public class Heavy extends Enemy
         {
         getWorld().addObject (new HeavyShot(), this.getX(), this.getY());
         shotTimer = 30;
-        Greenfoot.playSound("shot2.wav");
+        s2.setVolume(85);
+        s2.play();
         }
     }
     

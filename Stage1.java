@@ -18,6 +18,8 @@ public class Stage1 extends World
     public PlayerShip playerShip;
     private int score = 0;
     private ScoreDisplay scoreDisplay;
+   
+    
     
     /**
      * Constructor for objects of class Stage1.
@@ -32,6 +34,8 @@ public class Stage1 extends World
         image.setColor(Color.BLACK);
         image.fill();
         star();
+        
+        
         
         //TurretBase turretBase = new TurretBase();
         playerShip = new PlayerShip();
