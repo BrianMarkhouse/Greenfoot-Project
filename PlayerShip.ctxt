@@ -1,10 +1,10 @@
 #BlueJ class context
-comment0.target=PlayerShip
-comment0.text=\r\n\ The\ player's\ ship\r\n\ \r\n\ @author\ Brian\ Markhouse\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ levelWeaponUp()
-comment2.params=o
-comment2.target=void\ setShieldOn(boolean)
+comment0.params=
+comment0.target=void\ levelWeaponUp()
+comment1.params=o
+comment1.target=void\ setShieldOn(boolean)
+comment2.params=
+comment2.target=void\ death()
 comment3.params=
 comment3.target=void\ movement()
 comment4.params=

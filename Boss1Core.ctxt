@@ -1,10 +1,8 @@
 #BlueJ class context
-comment0.target=Boss1Core
-comment0.text=\r\n\ Boss1's\ core\r\n\ \r\n\ @author\ Brian\ Markhouse\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment2.params=d
-comment2.target=void\ takeDamage(int)
-comment3.params=
-comment3.target=void\ shoot()
-numComments=4
+comment0.params=
+comment0.target=void\ act()
+comment1.params=d
+comment1.target=void\ takeDamage(int)
+comment2.params=
+comment2.target=void\ shoot()
+numComments=3

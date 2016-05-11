@@ -22,9 +22,9 @@ public class SmallShot extends Projectile
         }
         else if(isTouching(PlayerShip.class) )
         {
-            removeTouching(PlayerShip.class);
+            PlayerShip s = (PlayerShip)getOneIntersectingObject(PlayerShip.class);
+            s.death();
             getWorld().removeObject(this);
-            Greenfoot.playSound("death.wav");
             return;
         }
         // Move in the direction I am facing

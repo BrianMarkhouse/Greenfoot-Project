@@ -28,7 +28,7 @@ public class Boss1Core extends Enemy
             Stage1 s = (Stage1)getWorld();
             s.addScore(score);
             s.removeObject(body);
-            s.victory(); //send the player to the high score screen
+            s.gameOver();
             s.removeObject(this);
             
             return;

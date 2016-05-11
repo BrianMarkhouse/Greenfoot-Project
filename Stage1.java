@@ -78,15 +78,10 @@ public class Stage1 extends World
             //addObject (new Star (radius, new Color(r, g, b)), x, y);
         }
     }
-    public void victory()
+    public void gameOver()
     {
-        int toWait = 100;
-        for (int i = 0; i < toWait; i++)
-        {
-            //stalling for time, doesnt work
-        }
-        World hs = new HighScores();
-        Greenfoot.setWorld(hs);
+        addObject(new GameOver(), 600, 450);
+        
     }
     public void act()
     {
